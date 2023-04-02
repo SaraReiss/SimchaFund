@@ -1,0 +1,50 @@
+﻿ <div b-2ya7vgwtda class="container">
+        <main b-2ya7vgwtda role="main" class="pb-3" style="margin-top: 60px;">
+
+<div class="header">
+    <h1>
+        Contributors for the
+        New Simcha simcha
+    </h1>
+</div>
+<div class="table-responsive">
+    <form  method="POST" action="/home/updatecontributions">
+        <input type="hidden" name="simchaId" value="3030" />
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>Contribute</th>
+                <th>Name</th>
+                <th>Balance</th>
+                <th>Always Include</th>
+                <th>Amount</th>
+            </tr>
+                <input type="hidden" name="contributors[0].ContributorId" value="1003" />
+                <tr>
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            <div class="form-check form-switch">
+                                    <input style="width: 4rem; height: 2rem;" name="contributors[0].Include" class="form-check-input" type="checkbox" checked value="true">
+                            </div>
+                        </div>
+                    </td>
+                    <td>Frie Matty</td>
+                    <td></td>
+                    <td style="text-align: center;">
+                    </td>
+                    <td>
+                        <input type="text" name="contributors[0].amount" class="form-control" value="5.0000" />
+                    </td>
+                </tr>
+                <input type="hidden" name="contributors[1].ContributorId" value="1004" />
+                <tr>
+                    
+                   
+        </table>
+        <div style="text-align:center;">
+            <button class="btn-lg btn-danger">Update</button>
+        </div>
+    </form>
+</div>
+
+        </main>
+    </div>
