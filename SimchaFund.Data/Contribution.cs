@@ -8,9 +8,8 @@ namespace SimchaFund.Data
 {
     public class Contribution
     {
-        public int SimchaId { get; set; }
         public int ContributorId { get; set; }
         public decimal Amount { get; set; }
-        public bool YesContribute { get; set; }
+        public bool DidContribute { get; set; }
     }
 }

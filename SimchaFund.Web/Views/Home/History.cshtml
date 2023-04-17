@@ -1,9 +1,10 @@
-﻿<div b-2ya7vgwtda class="container">
+﻿@model ViewModel
+<div b-2ya7vgwtda class="container">
     <main b-2ya7vgwtda role="main" class="pb-3" style="margin-top: 60px;">
 
         <div class="header">
-            <h1>History for ndotby k</h1>
-            <h3>Current Balance: -$310.00</h3>
+            <h1>History for  @Model.Name</h1>
+            <h3>Current Balance: @Model.Balance.ToString("C")</h3>
         </div>
 
         <div class="row header">
@@ -15,16 +16,22 @@
                         <th>Amount</th>
                     </tr>
                     <tr>
-                        <td>
-                            Contribution for the John Doe simcha
-                        </td>
-                        <td style="text-align: center; vertical-align: middle;">
-                            Thursday, 29 September 2022
-                        </td>
-                        <td style="text-align: center; vertical-align: middle;">
-                            -$5.00
-                        </td>
-                    </tr>
+                        @foreach (var action in Model.Actions)
+                        {
+                         <tr>
+                            <td>@action.Act</td>
+
+                            <td
+                                style="text-align: center; vertical-align: middle;">
+                                    @action.Date.ToLongDateString()
+                            </td>
+                            <td  style="text-align: center; vertical-align: middle;">
+                                    @action.Amount.ToString("C")
+                            </td>
+                        </tr>
+                        }
+                       
+                   
                     
                 </table>
             </div>

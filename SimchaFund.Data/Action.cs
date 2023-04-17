@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace SimchaFund.Data
 {
-    public  class Deposit
+    public  class Action
     {
-        public int Id { get; set; }
-        public int ContributorId { get; set; }
         public decimal Amount { get; set; }
+        public string Act { get; set; }
         public DateTime Date { get; set; }
-        public string SimchaName { get; set; }
     }
 }

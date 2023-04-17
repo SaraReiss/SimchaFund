@@ -1,6 +1,15 @@
-﻿@model ViewModel
+﻿@model ViewModel    
 <div b-2ya7vgwtda class="container">
     <main b-2ya7vgwtda role="main" class="pb-3" style="margin-top: 60px;">
+        @if (!String.IsNullOrEmpty(Model.Message))
+        {
+            <div class="col-md-12">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    @Model.Message
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        }
 
         <div class="header">
             <h1>Simchas</h1>
@@ -25,10 +34,8 @@
 
                         <td><a class="btn btn-primary" href="/home/contributions?simchaid=@simcha.Id">Contributions</a> </td>
                         <td>@simcha.SimchaName</td>
-                        <td>
-                            11 / 21
-                        </td>
-                        <td>$57.00</td>
+                        <td>@simcha.ContributerCount / @Model.TotalContributorAmount</td>
+                        <td>@simcha.Total.ToString("C")</td>
                         <td>@simcha.Date.ToLongDateString()</td>
                     </tr>
                 }
