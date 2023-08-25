@@ -86,7 +86,7 @@ namespace SimchaFund.Web.Controllers
               var vm = new ViewModel
             {
 
-                Actions = actions.OrderBy(d => d.Date).ToList(),
+                Actions = actions.OrderByDescending(d => d.Date).ToList(),
                 Balance = manager.GetBalance(id),
                 Name = manager.GetContributorName(id),
 

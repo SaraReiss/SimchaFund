@@ -234,42 +234,7 @@ namespace SimchaFund.Data
             cmd.ExecuteNonQuery();
             connection.Close();
         }
-        //public List<Contributor> GetContributorsFromSimcha(int simchaId)
-        //{
-        //    using var connection = new SqlConnection(_connectionString);
-        //    using var cmd = connection.CreateCommand();
-        //    cmd.CommandText = @"SELECT * from Contributors c 
-        //    LEFT JOIN SimchasContributors sc 
-        //   ON c.Id = sc.ContributorId 
-        //    where sc.SimchaId = @simchaid or sc.SimchaId is null";
-        //    cmd.Parameters.AddWithValue("@simchaid", simchaId);
-        //    connection.Open();
-        //    var reader = cmd.ExecuteReader();
-        //    var contributors = new List<Contributor>();
-        //    while (reader.Read())
-        //    {
-        //        var contributor = new Contributor
-        //        {
-
-        //            Id = (int)reader["Id"],
-        //            FirstName = (string)reader["FirstName"],
-        //            LastName = (string)reader["LastName"],
-        //            CellNumber = (string)reader["CellNumber"],
-        //            Balance = GetBalance((int)reader["Id"]),
-        //            DateCreated = (DateTime)reader["DateCreated"],
-        //            AlwaysInclude = (bool)reader["AlwaysInclude"],
-        //            AmountContributed = reader.GetOrNull<decimal>("amount"),
-
-
-        //        };
-        //        contributors.Add(contributor);
-        //    }
-
-
-        //    return contributors;
-
-
-        //}
+        
         public decimal GetBalance(int id)
         {
 

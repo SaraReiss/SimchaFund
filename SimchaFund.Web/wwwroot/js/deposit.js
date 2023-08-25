@@ -2,7 +2,7 @@
 
     $(".deposit-button").on('click', function () {
         const button = $(this);
-       
+
         const name = button.data('name');
         $("#deposit-name").text(name);
         //console.log(name);
@@ -13,7 +13,7 @@
 
         new bootstrap.Modal($('#depo')[0]).show();
     })
-
+    
     $(".edit-contrib").on('click', function () {
 
         const button = $(this);
@@ -35,18 +35,35 @@
 
         $(".modal-body").append(` <input name="id" type="hidden" value="${id}" id="cont-id">`)
 
-       
+
 
         const form = $(".new-contrib form");
-        form.attr('action', '/home/edit'); 
+        form.attr('action', '/home/edit');
         new bootstrap.Modal($('.new-contrib')[0]).show();
-         
 
-      
+
+
 
 
     })
-     
+    //add this..
+    //$("#search").on("input", function () {
+    //    console.log('in search ');
+    //    var searchText = $(this).val().toLowerCase();
+    //    $(".tr").filter(function () {
+    //        return $(this).text().toLowerCase().indexOf(searchText) === -1;
+    //    }).hide();
+    //    $(".tr").filter(function () {
+    //        return $(this).text().toLowerCase().indexOf(searchText) !== -1;
+    //    }).show();
+    //});
+
+    //$("#clear").on("click", function () {
+    //    $("#search").val("");
+    //    $(".tr").show();
+    //});
+
+
 
 
 }) 

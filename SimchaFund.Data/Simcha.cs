@@ -11,6 +11,9 @@ namespace SimchaFund.Data
         public int Id { get; set; }
         public string SimchaName { get; set; }
         public DateTime Date { get; set; }
+
+
+
         public int ContributerCount { get; set; }
         public decimal Total { get; set; }
         public List<Contributor> contributors { get; set; }
